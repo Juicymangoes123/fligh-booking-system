@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <DialogPane prefHeight="560.0" prefWidth="120.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="169.0" prefWidth="1131.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="190.0" layoutY="70.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" text="Exit">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button layoutX="823.0" layoutY="69.0" mnemonicParsing="false" text="Done">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="69.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="153.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="240.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="320.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="403.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="480.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="562.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="641.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="714.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="791.0" layoutY="265.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="70.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="154.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="241.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="321.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="404.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="481.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="563.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="642.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="715.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="792.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="70.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="154.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="241.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="321.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="404.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="481.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="563.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="642.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="715.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="792.0" layoutY="404.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane prefHeight="141.0" prefWidth="1131.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="198.0" layoutY="83.0" text="Label" />
+            <Label layoutX="272.0" layoutY="83.0" text="Label" />
+            <Label layoutX="372.0" layoutY="83.0" text="Label" />
+            <Label layoutX="446.0" layoutY="83.0" text="Label" />
+            <Label layoutX="535.0" layoutY="83.0" text="Label" />
+            <Label layoutX="609.0" layoutY="83.0" text="Label" />
+            <Label layoutX="685.0" layoutY="83.0" text="Label" />
+            <Label layoutX="759.0" layoutY="83.0" text="Label" />
+            <Label layoutX="836.0" layoutY="83.0" text="Label" />
+            <Label layoutX="910.0" layoutY="83.0" text="Label" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="529.0" prefWidth="123.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="62.0" layoutY="117.0" text="Label" />
+            <Label layoutX="62.0" layoutY="274.0" text="Label" />
+            <Label layoutX="62.0" layoutY="413.0" text="Label" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
