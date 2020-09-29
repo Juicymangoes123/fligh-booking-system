@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,11 +10,18 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class FlightSeatsController {
+public class FlightSeatsController implements Initializable{
     ArrayList<String> seatsChosen = new ArrayList<>();
+
+    @FXML
+    private Button gettingSeats;
+
+    boolean isStarted = false;
+
 
     //Choosing which seats the user would like to sit in on the plane
     @FXML
@@ -33,11 +41,14 @@ public class FlightSeatsController {
 
     //When the user has finished choosing their seats
     @FXML
-    private void done(ActionEvent event){
+    private void done(ActionEvent event) throws SQLException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        ArrayList<String> userLoginInfo = information(stage);
-        System.out.println("Username: " + userLoginInfo.get(0) + " Password: " + userLoginInfo.get(1));
+        User user = (User) stage.getUserData();
+        String username = user.getUsername();
+        for (String seat : seatsChosen){
+            sql_queries.registerSeats(username, seat);
+        }
     }
 
     //Exiting the program
@@ -57,5 +68,37 @@ public class FlightSeatsController {
         userLoginInfo.add(username);
         userLoginInfo.add(password);
         return userLoginInfo;
+    }
+
+    //Getting seats that have already been booked
+    @FXML
+    public void gettingBookedSeats() throws SQLException {
+        if (isStarted == false) {
+            ArrayList<String> bookedSeats = sql_queries.getBookedSeats();
+            for (String i : bookedSeats) {
+                disableBookedSeats(i);
+                System.out.println(i);
+            }
+        }
+    }
+
+    private void disableBookedSeats(String id){
+        Scene scene = gettingSeats.getScene();
+        Button button = (Button) scene.lookup("#" + id);
+        button.getStylesheets().add(getClass().getResource("flightSeats.css").toExternalForm());
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+            Platform.runLater(() -> {
+                try {
+                    gettingBookedSeats();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            });
+
     }
 }

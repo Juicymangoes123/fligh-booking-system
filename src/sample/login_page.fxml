@@ -39,6 +39,7 @@
                <children>
                   <TextField fx:id="username" layoutX="9.0" layoutY="63.0" prefHeight="25.0" prefWidth="390.0" promptText="Username or email" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="63.0" />
                   <PasswordField fx:id="password" layoutX="9.0" layoutY="140.0" prefHeight="25.0" prefWidth="390.0" promptText="Password" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="140.0" />
+                  <Label fx:id="exists" alignment="CENTER" layoutX="34.0" layoutY="204.0" prefHeight="17.0" prefWidth="288.0" />
                </children>
             </AnchorPane>
          </children>
